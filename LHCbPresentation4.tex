@@ -164,54 +164,11 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Measurement of $\gamma$ from $B^\pm\to DK^\pm$, $D\to K^+K^-\pi^+\pi^-$}
-  \vspace{0.0cm}
-  \vspace{0.5cm}
-  \begin{itemize}
-    \setlength\itemsep{1.2em}
-    \item{First proposed by J. Rademacker and G. Wilkinson}
-    \begin{itemize}
-      \item{\href{https://arxiv.org/abs/hep-ph/0611272}{arXiv:hep-ph/0611272}}
-      \item{Amplitude model by FOCUS}
-      \item{Expected $\gamma$ precision with $1000$ candidates: $14^\circ$}
-    \end{itemize}
-    \item{CLEO amplitude analysis}
-    \begin{itemize}
-      \item{\href{https://arxiv.org/abs/1201.5716}{arXiv:1201.5716}}
-      \item{Expected $\gamma$ precision with $2000$ candidates: $11^\circ$}
-    \end{itemize}
-    \item{State of the art amplitude analysis by LHCb :}
-    \begin{itemize}
-      \item{\href{https://cds.cern.ch/record/2648586?ln=en}{LHCb-PAPER-2018-041}}
-      \item{Use to develop efficient binning scheme}
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
 \section{Binned \texorpdfstring{$\gamma$}{gamma} analysis of the \texorpdfstring{$D\to K^+K^-\pi^+\pi^-$}{D->KKpipi} mode}
 \begin{frame}{The $D\to K^+K^-\pi^+\pi^-$ decay}
   \begin{center}
     {\huge Binned $\gamma$ analysis of the $D\to K^+K^-\pi^+\pi^-$ mode}
   \end{center}
-\end{frame}
-
-\begin{frame}{Binned measurement of $\gamma$}
-  \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{Final measurement will be \underline{model-independent}}
-    \begin{itemize}
-      \item{Poor binning reduces statistical sensitivity $\to$ No bias!}
-    \end{itemize}
-    \item{Need strong phases of $D$ decay $\to$ Measure at BESIII}
-    \item{LHCb-PAPER-2020-019: $B^\pm\to Dh^\pm$, $D\to K_S^0 h^+h^-$}
-    \begin{itemize}
-      \item{Single most precise measurement: $\gamma = (68.7^{+5.2}_{-5.1})^\circ$}
-    \end{itemize}
-  \end{itemize}
-  \begin{figure}
-    \includegraphics[height = 4cm]{Plots/KsPiPi_optimal.png}
-    \includegraphics[height = 4cm]{Plots/KsKK_binning.png}
-  \end{figure}
 \end{frame}
 
 \begin{frame}{The BPGGSZ method}
@@ -259,34 +216,6 @@
   \end{itemize}
 \end{frame}
 
-\section{Binning scheme}
-\begin{frame}{Binning Scheme}
-  \begin{center}
-    {\huge Binning scheme}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Binning scheme requirements}
-  \vspace{0.0cm}
-  {\Large A binning scheme must satisfy the following:}
-  \begin{itemize}
-    \item{Minimal dilution of strong phases when integrating over bins}
-    \item{Enhance interference between $B^\pm\to D^0h^\pm$ and $B^\pm\to\bar{D^0}h^\pm$}
-  \end{itemize}
-  \vspace{0.4cm}
-  {\Large How to bin a 5-dimensional phase space?}
-  \begin{itemize}
-    \item{Generate C++ code for LHCb amplitude model using AmpGen\footnote{\href{https://github.com/GooFit/AmpGen}{AmpGen} by Tim Evans}}
-    \item{For each $B^\pm$ candidate, calculate}
-  \end{itemize}
-  \begin{center}
-    {\Large $\frac{\mathcal{A}(D^0)}{\mathcal{A}(\bar{D^0})} = r_De^{i\delta_D}$}
-  \end{center}
-  \begin{itemize}
-    \item{Bin along $\delta_D$ and $r_D$, maximize $Q$-value to optimize}
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Binning scheme}
   \begin{figure}
     \centering
@@ -299,122 +228,45 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{$\gamma$ precision benchmark}
-  \begin{itemize}
-    \item{Generate $2000$ $B^\pm\to DK^\pm$ candidates using LHCb model in AmpGen}
-    \item{Fit back with same model using AmpGen}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/AmpGen_UnbinnedFit_gamma_pull.png}
-      \caption{Pull of $\gamma$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/AmpGen_UnbinnedFit_gamma_fitted.png}
-      \caption{Fitted $\gamma$ values}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Precision of $\gamma$ in unbinned fit: $11^\circ$
-  \end{center}
-\end{frame}
-
-\begin{frame}{Study of $\gamma$ precision}
-  \begin{itemize}
-    \item{Binned fit setup: Optimized $2\times 8$ bins}
-    \item{Fit same AmpGen samples, using $c_i$, $s_i$ and $F_i$ from LHCb model}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BinnedFit_gamma_pull.png}
-      \caption{Pull of $\gamma$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BinnedFit_gamma_fitted.png}
-      \caption{Fitted $\gamma$ values}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Precision of $\gamma$ in binned fit: $12^\circ$ \\
-    Consistent with unbinned fit and $Q$-value
-  \end{center}
-\end{frame}
-
-\section{\texorpdfstring{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$}{B to K+ K- pi+ pi- h} selection}
-\begin{frame}{$B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ selection}
-  \begin{center}
-    {\huge $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ selection}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Samples}
-  \begin{itemize}
-    \setlength\itemsep{1.2em}
-    \item{Data sample: Full Run 1 and 2}
-    \item{MC samples: Full Run 1 and 2 excluding 2015}
-    \begin{itemize}
-      \item{AmpGen model}
-      \item{Large filtered samples}
-    \end{itemize}
-  \end{itemize}
-  \begin{block}{Stripping lines}
-    $\text{StrippingB2D0PiD2HHHHBeauty2CharmLineDecision}$ \\
-    $\text{StrippingB2D0KD2HHHHBeauty2CharmLineDecision}$
-  \end{block}
-\end{frame}
-
-\begin{frame}{Boosted Decision Tree}
-  \begin{itemize}
-    \setlength\itemsep{1.2em}
-    \item{BDTG from TMVA Toolkit}
-    \item{Signal sample: $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ MC samples}
-    \item{Background sample: Data sample with $m_{B^\pm}^\text{DTF}\in[5800, 7000]\si{\mega\eV}$}
-    \item{Random, equal sized test and training samples}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{BDT training results}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/overtrain_BDTG.png}
-      \caption{BDT output}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/overtrain_BDTG_log.png}
-      \caption{BDT output on a logarithmic scale}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{BDT optimization study}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun1.png}
-      \caption{Run $1$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BDTCutVersusGammaErrorRun2.png}
-      \caption{Run $2$}
-    \end{subfigure}
-  \end{figure}
-  \begin{itemize}
-    \item{Run $1$: Pick BDT working point at 0.65}
-    \item{Run $2$: Pick BDT working point at 0.75}
-  \end{itemize}
-\end{frame}
-
 \section{Backgrounds}
 \begin{frame}{Backgrounds}
   \begin{center}
     {\huge Backgrounds}
+  \end{center}
+\end{frame}
+
+\begin{frame}{$D$ semileptonic backgrounds}
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item{$B^\pm\to Dh^\pm$, $D\to K(X)l\nu$, $K(X)\to K\pi\pi$}
+    \begin{itemize}
+      \item{$K_1(1270)$}
+      \item{$K_1(1400)$}
+      \item{$K^*(1410)$}
+      \item{$K^*(1680)$}
+      \item{$K_2^*(1430)$}
+    \end{itemize}
+    \item{Single mis-ID: $K\mu\pi\pi\to KK\pi\pi$}
+    \item{Double mis-ID: $K\pi\pi\mu\to KK\pi\pi$}
+    \item{Generate Rapidsim samples, reweight with PIDCalib2}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{$D$ semileptonic backgrounds}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2DK.png}
+      \caption{$B\to DK$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2Dpi.png}
+      \caption{$B\to D\pi$}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    Conclusion: Negligible impact, include in systematics
   \end{center}
 \end{frame}
 
@@ -434,7 +286,7 @@
     \end{subfigure}%
     \begin{subfigure}{0.45\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_DMass.png}
-      \caption{Triple misID}
+      \caption{Triple mis-ID}
     \end{subfigure}
     \caption{$D$ invariant mass}
   \end{figure}
@@ -449,7 +301,7 @@
     \end{subfigure}%
     \begin{subfigure}{0.5\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/Kpipipi_TripleMisID_Dpi_BMass.png}
-      \caption{Triple misID}
+      \caption{Triple mis-ID}
     \end{subfigure}
     \caption{$B$ invariant mass}
   \end{figure}
@@ -474,55 +326,6 @@
   \end{center}
 \end{frame}
 
-\section{Fit to data}
-\begin{frame}{Global fit}
-  \begin{center}
-    {\huge Global fit}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Signal parameterisation}
-  \begin{itemize}
-    \setlength\itemsep{1.2em}
-    \item{PDF shape parameterization identical to LHCb-ANA-2020-001}
-    \item{Signal: Gaussian + Modified Cruijff}
-    \item{Shape fixed from MC, yield and width floated}
-    \item{Exponential background}
-  \end{itemize}
-  \vspace{0.5cm}
-  \begin{equation*}
-    f_\text{MG}(m|m_B, \sigma, \alpha_L, \alpha_R, \beta)\propto
-    \begin{cases}
-      \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_L\Delta m^2}\Big), \quad \Delta m = m - m_B < 0 \\
-      \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \quad \Delta m = m - m_B > 0 \\
-    \end{cases}
-  \end{equation*}
-\end{frame}
-
-\begin{frame}{Partially reconstructed background}
-  \begin{itemize}
-    \setlength\itemsep{1.3em}
-    \item{$B^\pm\to D\pi^\pm$:}
-    \begin{enumerate}
-    \setlength\itemsep{0.4em}
-      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])\pi^\pm$}
-      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])\pi^\pm$}
-      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]\pi^\pm$}
-      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])\pi^\pm$}
-    \end{enumerate}
-    \item{$B^\pm\to DK^\pm$:}
-    \begin{enumerate}
-      \setlength\itemsep{0.4em}
-      \item{$B^\pm\to (D^{*0}\to D^0[\pi^0])K^\pm$}
-      \item{$B^0\to (D^{*\mp}\to D^0[\pi^\mp])K^\pm$}
-      \item{$B^{\pm(0)}\to D^0[\pi^{0(\mp)}]K^\pm$}
-      \item{$B^\pm\to(D^{*0}\to D^0[\gamma])K^\pm$}
-      \item{$B_s^0\to\bar{D^0}[\pi^+]K^-$}
-      \item{Mis-ID from partially reconstructed $B^\pm\to D\pi^\pm$ channel}
-    \end{enumerate}
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Global fit}
   \begin{figure}
     \centering
@@ -536,121 +339,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Binned CP fit}
-  \begin{center}
-    {\huge Binned CP fit}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Binned CP fit}
-  \begin{itemize}
-    \setlength\itemsep{1.2em}
-    \item{Use $2\times 8$ bins}
-    \item{$c_i$ and $s_i$ calculated using MC integration of LHCb amplitude model}
-    \item{Fit for CP observables}
-    \item{PDF shape parameters fixed from global fit}
-    \item{Yield of signal, low mass partially reconstructed background and combinatorial background floated}
-    \item{Fractional yields $F_i$ floated}
-  \end{itemize}
-  \begin{equation*}
-    \mathcal{R}_i = 
-    \begin{cases}
-      F_i, \quad i = -8 \\
-      F_i/\sum_{j\geq i}, -8 < i\leq+8
-    \end{cases}
-  \end{equation*}
-\end{frame}
-
-\begin{frame}{CP observables result: $x_-^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_-^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{CP observables result: $x_+^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_+^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{CP observables result: $x_\xi^{D\pi}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_\xi^{D\pi}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_pull.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
 \section{Systematic uncertainty}
 \begin{frame}{Systematic uncertainties}
   \begin{center}
@@ -658,17 +346,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{$c_i$ and $s_i$ systematic uncertainty}
-  \begin{itemize}
-    \setlength\itemsep{1.5em}
-    \item{Uncertainty of $c_i$ and $s_i$ in BESIII analysis (mostly statistical)}
-    \item{Largest systematic uncertainty}
-    \item{Take uncertainties from $D\to4\pi$ strong phase analysis and extrapolate to $\SI{20}{\per\femto\barn}$}
-    \item{Smear $c_i$ and $s_i$ and do many fits to data}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Remaining systematic uncertainties}
+\begin{frame}{Systematic uncertainties}
   Different strategies for evaluating systematic uncertainties:
   \vspace{0.2cm}
   \begin{itemize}
@@ -688,6 +366,55 @@
     \end{itemize}
     \item{Fit bias: Take bias toys as systematic uncertainty}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s01_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s03_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s12_BeforeReweighting.png}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s23_BeforeReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s012_BeforeReweighting.png}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    Need to reweight events to account for efficiency differences between AmpGen samples and LHCb MC
+  \end{center}
+\end{frame}  
+
+\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s01_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s03_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s12_AfterReweighting.png}
+    \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s23_AfterReweighting.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/s012_AfterReweighting.png}
+    \end{subfigure}
+  \end{figure}
+  \begin{center}
+    After reweighing, use weights to recalculate $c_i$ and $s_i$ \\
+    Conclusion: Efficiency correction of $c_i$ and $s_i$ is an order of magnitude smaller than their uncertainties, no systematic uncertainty considered
+  \end{center}
 \end{frame}
 
 \begin{frame}{Summary of all systematic uncertainties}
@@ -945,41 +672,6 @@
   \end{tabular}
 \end{frame}
 
-\begin{frame}{$D$ semileptonic backgrounds}
-  \begin{itemize}
-    \setlength\itemsep{1em}
-    \item{$B^\pm\to Dh^\pm$, $D\to K(X)l\nu$, $K(X)\to K\pi\pi$}
-    \begin{itemize}
-      \item{$K_1(1270)$}
-      \item{$K_1(1400)$}
-      \item{$K^*(1410)$}
-      \item{$K^*(1680)$}
-      \item{$K_2^*(1430)$}
-    \end{itemize}
-    \item{Single mis-ID: $K\mu\pi\pi\to KK\pi\pi$}
-    \item{Double mis-ID: $K\pi\pi\mu\to KK\pi\pi$}
-    \item{Generate Rapidsim samples, reweight with PIDCalib2}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{$D$ semileptonic backgrounds}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2DK.png}
-      \caption{$B\to DK$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/D_SL_RapidSim_Combined_Fit_B2Dpi.png}
-      \caption{$B\to D\pi$}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Conclusion: Negligible impact, include in systematics
-  \end{center}
-\end{frame}
-
 \begin{frame}{Efficiency related systematics}
   Efficiency related systematics:
   \vspace{0.7cm}
@@ -1013,54 +705,5 @@
     Conclusion: More or less identical phase space acceptance, no systematic uncertainty considered
   \end{center}
 \end{frame}  
-
-\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s01_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s03_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s12_BeforeReweighting.png}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s23_BeforeReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s012_BeforeReweighting.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Need to reweight events to account for efficiency differences between AmpGen samples and LHCb MC
-  \end{center}
-\end{frame}  
-
-\begin{frame}{Efficiency correction of $c_i$ and $s_i$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s01_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s03_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s12_AfterReweighting.png}
-    \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s23_AfterReweighting.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.33\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/s012_AfterReweighting.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    After reweighing, use weights to recalculate $c_i$ and $s_i$ \\
-    Conclusion: Efficiency correction of $c_i$ and $s_i$ is an order of magnitude smaller than their uncertainties, no systematic uncertainty considered
-  \end{center}
-\end{frame}
 
 \end{document}
